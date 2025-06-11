@@ -1,0 +1,140 @@
+/* Overview Section */
+.overview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
+  background: black;
+  padding: 20px;
+  width: 100%;
+  flex-wrap: wrap; /* ✅ allows stacking on smaller screens */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Feature Card */
+.feature-card {
+  background: black;
+  color: white;
+  padding: 30px;
+  width: 320px;
+  height: 380px;
+  border: 2px solid white;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Hover Effects */
+.feature-card:hover {
+  background: white;
+  color: black;
+  transform: perspective(500px) rotateY(7deg) scale(1.03);
+  box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.feature-card:nth-child(even):hover {
+  transform: perspective(500px) rotateY(-7deg) scale(1.03);
+}
+
+/* Feature Content */
+.feature-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Feature Logos */
+.feature-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Titles */
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.feature-card:hover .feature-title {
+  color: black;
+}
+
+/* Descriptions */
+.feature-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.feature-card:hover .feature-description {
+  color: black;
+}
+
+/* Removing Scrollbar */
+body {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ========== 📱 Responsive Media Queries ========== */
+@media (max-width: 768px) {
+  .overview-container {
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .feature-card {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    padding: 25px;
+  }
+
+  .feature-logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+  }
+
+  .feature-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .feature-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .feature-title {
+    font-size: 1.2rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+  }
+}

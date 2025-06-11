@@ -1,0 +1,172 @@
+.admin-profile-container {
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .search-bar button {
+    background: black;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .search-bar button:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* User Info */
+  .user-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-info p {
+    font-size: 1.1rem;
+  }
+  
+  /* Sessions Table */
+  .session-table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .session-table th,
+  .session-table td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .session-table th {
+    background: black;
+    color: white;
+  }
+  
+  /* New Session Input */
+  .new-session {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+  
+  .new-session input,
+  .new-session textarea {
+    padding: 10px;
+    border: 2px solid black;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .new-session button {
+    background: black;
+    color: white;
+    border: 2px solid black;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .new-session button:hover {
+    background: white;
+    color: black;
+  }
+  
+  /* ========== 📱 Responsive Media Queries ========== */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.7rem;
+    }
+  
+    .session-table th,
+    .session-table td {
+      font-size: 0.95rem;
+      padding: 8px;
+    }
+  
+    .new-session input,
+    .new-session textarea {
+      font-size: 0.95rem;
+    }
+  
+    .search-bar input {
+      font-size: 0.95rem;
+      padding: 8px;
+    }
+  
+    .search-bar button {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .session-table {
+      font-size: 0.9rem;
+    }
+  
+    .search-bar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-bar input,
+    .search-bar button {
+      width: 100%;
+    }
+  
+    .new-session button {
+      font-size: 0.95rem;
+      padding: 10px;
+    }
+  }
+  

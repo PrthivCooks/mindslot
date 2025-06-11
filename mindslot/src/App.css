@@ -1,0 +1,8 @@
+body, html {
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+  overflow-y: auto; /* Enables vertical scrolling */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+}

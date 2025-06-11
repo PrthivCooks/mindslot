@@ -1,0 +1,95 @@
+/* Booking Page Container */
+.booking-container {
+  background: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Title */
+.booking-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Counsellor Grid */
+.counsellor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Counsellor Card */
+.counsellor-card {
+  background: black;
+  color: white;
+  border: 2px solid white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Slanting Hover Effect */
+.counsellor-card:hover {
+  background: white;
+  color: black;
+  transform: perspective(500px) rotateY(15deg) scale(1.02);
+  box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+}
+
+.counsellor-card:nth-child(even):hover {
+  transform: perspective(500px) rotateY(-15deg) scale(1.02);
+}
+
+/* Counsellor Image */
+.counsellor-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid white;
+}
+
+/* ========== 📱 Tablet and Mobile Responsive ========== */
+@media (max-width: 768px) {
+  .booking-title {
+    font-size: 1.7rem;
+  }
+
+  .counsellor-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .counsellor-card {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-title {
+    font-size: 1.5rem;
+  }
+
+  .counsellor-card {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .counsellor-image {
+    width: 80px;
+    height: 80px;
+  }
+}

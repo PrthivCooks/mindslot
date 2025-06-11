@@ -1,0 +1,15 @@
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevents the right scrollbar */
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; /* Ensures no horizontal scrolling */
+  overflow-y: auto;
+}

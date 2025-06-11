@@ -1,0 +1,72 @@
+.admin-appointments-container {
+    padding: 20px;
+  }
+  
+  .week-nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .grid-table {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .grid-header {
+    display: contents;
+  }
+  
+  .grid-cell {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .time-header, .day-header {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+  }
+  
+  .time-slot {
+    background-color: #f4f4f4;
+  }
+  
+  .slot {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .slot.Holiday {
+    background-color: orange;
+    color: white;
+  }
+  
+  .slot.Blocked {
+    background-color: red;
+    color: white;
+  }
+  
+  .slot button {
+    margin-top: 5px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  .holiday-btn {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  .block-btn {
+    background-color: yellow;
+  }
+  
+  .cancel-btn {
+    background-color: red;
+    color: white;
+  }
+  

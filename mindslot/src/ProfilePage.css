@@ -1,0 +1,70 @@
+/* Profile Page Container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    color: white;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    background: black;
+    border: 2px solid white;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+  }
+  
+  .profile-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Profile Info */
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-info label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .profile-info p {
+    font-size: 1rem;
+    border: 1px solid white;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Editable Input Fields */
+  .profile-info input {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Buttons */
+  .profile-actions button {
+    background: white;
+    color: black;
+    border: 2px solid white;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .profile-actions button:hover {
+    background: grey;
+    color: black;
+  }
+  

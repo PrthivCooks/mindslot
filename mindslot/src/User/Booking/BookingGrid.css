@@ -1,0 +1,234 @@
+/* Full page styling */
+.booking-grid-container {
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Week navigation buttons */
+  .week-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .week-nav button {
+    background: black;
+    color: white;
+    border: 2px solid black;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .week-nav button:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+  }
+  
+  /* Booking Grid Table */
+  .grid-table {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 2px solid black;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+  }
+  
+  /* Header & Row */
+  .grid-header,
+  .grid-row {
+    display: contents;
+  }
+  
+  /* Time/Day Headers */
+  .grid-cell.time-header,
+  .grid-cell.day-header {
+    background: black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+  
+  /* Grid Cells */
+  .grid-cell {
+    padding: 20px;
+    border: 2px solid black;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Slot Styles */
+  .slot {
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .Free { background: white; color: black; }
+  .Booked { background: black; color: white; }
+  .Blocked { background: gray; color: white; }
+  .Holiday { background: lightgray; color: black; }
+  .Past {
+    background: darkgray;
+    color: white;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .YourSlot { background: lightgray; color: black; }
+  
+  .slot:hover {
+    transform: scale(1.15);
+    z-index: 10;
+  }
+  
+  /* Appointments List */
+  .appointments {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1000px;
+  }
+  
+  .appointment-card {
+    background: white;
+    border: 2px solid black;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .appointment-card:hover {
+    background: black;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  /* Buttons */
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: black;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Booking Modal */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  /* Modal Input */
+  .modal-content textarea {
+    width: 90%;
+    height: 80px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Modal Button */
+  .modal-content button {
+    width: 100%;
+  }
+  
+  /* ========== 📱 Responsive Media Queries ========== */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.7rem;
+    }
+  
+    .grid-table {
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+  
+    .grid-cell {
+      padding: 15px;
+      font-size: 0.95rem;
+    }
+  
+    .week-nav button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .modal {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .grid-table {
+      font-size: 0.85rem;
+    }
+  
+    .grid-cell {
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  
+    .week-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .appointments {
+      width: 100%;
+    }
+  
+    .modal-content textarea {
+      height: 70px;
+    }
+  }
+  
